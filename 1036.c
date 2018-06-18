@@ -1,0 +1,89 @@
+#include<stdio.h>
+int main()
+{
+    int N,i,j;
+    char c;
+    scanf("%d %c",&N,&c);
+    char A[N][N];
+    if(N%2==0)
+    {
+        for(i=0;i<1;i++)
+        {
+          for(j=0;j<N;j++)
+          {
+             A[i][j]=c;
+          }
+       }
+       for(i=1;i<N/2-1;i++)
+       {
+         for(j=0;j<1;j++)
+         {
+             A[i][j]=c;
+         }
+         for(j=1;j<N-1;j++)
+         {
+             A[i][j]=' ';
+         }
+         for(j=N-1;j<N;j++)
+         {
+             A[i][j]=c;
+         }
+      }
+      for(i=N/2-1;i<N/2;i++)
+      {
+         for(j=0;j<N;j++)
+         {
+             A[i][j]=c;
+         }
+      }
+      for(i=0;i<N/2;i++)
+      {
+         for(j=0;j<N;j++)
+         {
+             printf("%c",A[i][j]);
+         }
+         printf("\n");
+      }
+    }
+    else
+    {
+        for(i=0;i<1;i++)
+        {
+          for(j=0;j<N;j++)
+          {
+             A[i][j]=c;
+          }
+       }
+       for(i=1;i<N/2;i++)
+       {
+         for(j=0;j<1;j++)
+         {
+             A[i][j]=c;
+         }
+         for(j=1;j<N-1;j++)
+         {
+             A[i][j]=' ';
+         }
+         for(j=N-1;j<N;j++)
+         {
+             A[i][j]=c;
+         }
+      }
+      for(i=N/2;i<N/2+1;i++)
+      {
+         for(j=0;j<N;j++)
+         {
+             A[i][j]=c;
+         }
+      }
+      for(i=0;i<N/2+1;i++)
+      {
+         for(j=0;j<N;j++)
+         {
+             printf("%c",A[i][j]);
+         }
+         printf("\n");
+      }
+    }
+    return 0;
+}
